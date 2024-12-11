@@ -48,9 +48,9 @@ export default {
 				info: '#29B6F6'
 			},
 			fontFamily: {
-				primary: ['Roboto', 'sans-serif'],
-				secondary: ['Ubuntu', 'sans-serif'],
-				decorative: ['the_salvador_condensedregular', 'sans-serif'],
+				'primary': ['Roboto', 'sans-serif'],
+				'ubuntu': ['Ubuntu', 'sans-serif'],
+				'decorative': ['TheSalvadorCondensed', 'sans-serif'],
 			},
 		},
 	},

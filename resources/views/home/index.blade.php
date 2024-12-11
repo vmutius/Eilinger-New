@@ -5,71 +5,68 @@
     <main id="main">
 
         <!-- ======= About Us Section ======= -->
-        <section id="about" class="about">
-            <div class="container mx-auto">
-                <div class="section-title">
-                    <h2
-                        class="text-center text-[2.5rem] font-bold text-[#37517e] uppercase relative mb-5 pb-5
-                              after:content-[''] after:absolute after:block after:w-10 after:h-[3px] after:bg-[#47b2e4] after:bottom-0 after:left-1/2 after:-translate-x-1/2
-                              before:content-[''] before:absolute before:block before:w-[120px] before:h-[1px] before:bg-gray-400 before:bottom-[1px] before:left-1/2 before:-translate-x-1/2">
-                        {{ __('home.about') }}
-                    </h2>
-                </div>
+        <section id="about" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <x-heading.decorative class="text-center">
+                    {{ __('home.about') }}
+                </x-heading.decorative>
 
-                <div class="row content">
-                    <div class="col-lg-6">
-                        <h3 class="text-[#2d405f] text-2xl font-bold mb-4">{{ __('home.philosophy') }}</h3>
-                        <p class="text-[#444444] mb-4">{{ __('home.philosophy_text1') }}</p>
-                        {{ __('home.philosophy_text2') }}Im Fokus unserer Unterstützungsleistungen stehen kleinere
-                        Vereine...
+                <div class="grid md:grid-cols-2 gap-8 mt-8">
+                    {{-- Philosophy Column --}}
+                    <div class="space-y-4">
+                        <h3 class="font-ubuntu text-[28px] font-bold leading-[1.2] text-black">
+                            {{ __('home.philosophy') }}
+                        </h3>
+                        <p class="text-black leading-relaxed">
+                            {{ __('home.philosophy_text1') }}
+                        </p>
+                        <p class="text-black leading-relaxed">
+                            {{ __('home.philosophy_text2') }}
                         </p>
                     </div>
-                    <div class="col-lg-6 pt-4 pt-lg-0">
-                        <h3 class="text-[#2d405f] text-2xl font-bold mb-4">{{ __('home.purpose') }}</h3>
-                        <p class="text-[#444444] mb-4">{{ __('home.purpose_text') }}:</p>
-                        <ul class="list-none !list-style-type-none m-0 p-0" style="list-style: none !important;">
-                            <li class="!list-style-type-none relative pl-6 mb-3"
-                                style="list-style: none !important; position: relative; padding-left: 1.5rem;">
-                                <i class="bi bi-check-all !text-[#47b2e4] absolute left-0 top-1"
-                                    style="color: #47b2e4 !important; position: absolute; left: 0; top: 0.25rem; line-height: 1;"></i>
-                                <span class="text-[#444444]">{{ __('home.purpose1') }}</span>
+
+                    {{-- Purpose Column --}}
+                    <div class="space-y-4">
+                        <h3 class="font-ubuntu text-[28px] font-bold leading-[1.2] text-black">
+                            {{ __('home.purpose') }}
+                        </h3>
+                        <p class="text-black leading-relaxed mb-4">
+                            {{ __('home.purpose_text') }}:
+                        </p>
+
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <i class="bi bi-check2-all text-accent text-xl mr-2"></i>
+                                <span class="text-black">{{ __('home.purpose1') }}</span>
                             </li>
-                            <li class="!list-style-type-none relative pl-6 mb-3"
-                                style="list-style: none !important; position: relative; padding-left: 1.5rem;">
-                                <i class="bi bi-check-all !text-[#47b2e4] absolute left-0 top-1"
-                                    style="color: #47b2e4 !important; position: absolute; left: 0; top: 0.25rem; line-height: 1;"></i>
-                                <span class="text-[#444444]">{{ __('home.purpose2') }}</span>
+                            <li class="flex items-start">
+                                <i class="bi bi-check2-all text-accent text-xl mr-2"></i>
+                                <span class="text-black">{{ __('home.purpose2') }}</span>
                             </li>
-                            <li class="!list-style-type-none relative pl-6 mb-3"
-                                style="list-style: none !important; position: relative; padding-left: 1.5rem;">
-                                <i class="bi bi-check-all !text-[#47b2e4] absolute left-0 top-1"
-                                    style="color: #47b2e4 !important; position: absolute; left: 0; top: 0.25rem; line-height: 1;"></i>
-                                <span class="text-[#444444]">{{ __('home.purpose3') }}</span>
+                            <li class="flex items-start">
+                                <i class="bi bi-check2-all text-accent text-xl mr-2"></i>
+                                <span class="text-black">{{ __('home.purpose3') }}</span>
                             </li>
-                            <li class="!list-style-type-none relative pl-6 mb-3"
-                                style="list-style: none !important; position: relative; padding-left: 1.5rem;">
-                                <i class="bi bi-check-all !text-[#47b2e4] absolute left-0 top-1"
-                                    style="color: #47b2e4 !important; position: absolute; left: 0; top: 0.25rem; line-height: 1;"></i>
-                                <span class="text-[#444444]">{{ __('home.purpose4') }}</span>
+                            <li class="flex items-start">
+                                <i class="bi bi-check2-all text-accent text-xl mr-2"></i>
+                                <span class="text-black">{{ __('home.purpose4') }}</span>
                             </li>
-                            <li class="!list-style-type-none relative pl-6 mb-3"
-                                style="list-style: none !important; position: relative; padding-left: 1.5rem;">
-                                <i class="bi bi-check-all !text-[#47b2e4] absolute left-0 top-1"
-                                    style="color: #47b2e4 !important; position: absolute; left: 0; top: 0.25rem; line-height: 1;"></i>
-                                <span class="text-[#444444]">{{ __('home.purpose5') }}</span>
+                            <li class="flex items-start">
+                                <i class="bi bi-check2-all text-accent text-xl mr-2"></i>
+                                <span class="text-black">{{ __('home.purpose5') }}</span>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
-        </section><!-- End About Us Section -->
+        </section>
 
         <!-- ======= Förderbereiche ======= -->
         <section id="our-values" class="bg-[#f3f5fa] py-[60px] overflow-hidden">
             <div class="container">
                 <div class="section-title">
                     <h2
-                        class="text-center text-[2.5rem] font-bold text-[#37517e] uppercase relative mb-5 pb-5
+                        class="font-decorative text-center text-[2.5rem] font-bold text-[#37517e] uppercase relative mb-5 pb-5
                               after:content-[''] after:absolute after:block after:w-10 after:h-[3px] after:bg-[#47b2e4] after:bottom-0 after:left-1/2 after:-translate-x-1/2
                               before:content-[''] before:absolute before:block before:w-[120px] before:h-[1px] before:bg-gray-400 before:bottom-[1px] before:left-1/2 before:-translate-x-1/2">
                         {{ __('home.funding') }}

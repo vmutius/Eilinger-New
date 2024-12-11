@@ -17,6 +17,8 @@
     <link rel="alternate" hreflang="en" href="https://www.eilingerstiftung.ch/en/@yield('link')" />
     <link rel="alternate" hreflang="x-default" href="https://www.eilingerstiftung.ch/@yield('link')" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -33,15 +35,14 @@
         <!-- Flash Messages -->
         @if (session()->has('success'))
             <div x-data="{ show: true }" x-show="show" x-init="setTimeout(() => show = false, 3000)"
-                class="fixed top-4 right-4 bg-success text-white px-6 py-3 rounded-lg shadow-lg">
+                class="fixed top-20 right-4 bg-success text-white px-6 py-3 rounded-lg shadow-lg z-50">
                 <p>{{ session('success') }}</p>
             </div>
         @endif
 
-        <!-- Hero Section (only on pages that need it) -->
-        @hasSection('hero')
-            <x-hero />
-        @endif
+
+        <x-hero />
+
 
         <!-- Main Content -->
         <main class="flex-grow">

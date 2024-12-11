@@ -1,15 +1,16 @@
-<header class="fixed top-0 w-full bg-primary">
+<header class="sticky top-0 w-full bg-primary z-50">
     <div class="container mx-auto px-4">
         <div class="flex justify-between items-center h-16">
             {{-- Logo --}}
-            <h1 class="text-white font-bold text-xl">
-                <a href="{{ route('index', app()->getLocale()) }}" class="hover:text-accent transition-colors">
+            <h1 class="text-white">
+                <a href="{{ route('index', app()->getLocale()) }}"
+                    class="font-primary text-[28px] tracking-[2px] uppercase hover:text-accent transition-colors">
                     Eilinger Stiftung
                 </a>
             </h1>
 
             <nav class="hidden md:flex items-center space-x-4">
-                <ul class="flex items-center space-x-6">
+                <ul class="flex items-center space-x-6 font-primary text-base">
                     <x-nav.item href="{{ route('index', app()->getLocale()) }}#hero" :active="request()->is(app()->getLocale())">
                         {{ __('home.home') }}
                     </x-nav.item>
@@ -85,7 +86,26 @@
     <div x-show="mobileMenuOpen" class="md:hidden bg-primary-800" x-data="{ mobileMenuOpen: false }">
         <!-- Mobile navigation items -->
         <div class="px-2 pt-2 pb-3 space-y-1">
-            <!-- Add your mobile menu items here -->
+            <x-nav.item href="{{ route('index', app()->getLocale()) }}#hero" :active="request()->is(app()->getLocale())">
+                {{ __('home.home') }}
+            </x-nav.item>
+
+            <x-nav.item href="{{ route('index', app()->getLocale()) }}#about" :active="request()->url() === url(app()->getLocale()) . '#about'">
+                {{ __('home.about') }}
+            </x-nav.item>
+
+            <x-nav.item href="{{ route('index', app()->getLocale()) }}#our-values" :active="request()->url() === url(app()->getLocale()) . '#our-values'">
+                {{ __('home.funding') }}
+            </x-nav.item>
+
+            <x-nav.item href="{{ route('index', app()->getLocale()) }}#projekte" :active="request()->url() === url(app()->getLocale()) . '#projekte'">
+                {{ __('home.projects') }}
+            </x-nav.item>
+
+            <x-nav.item href="{{ route('index', app()->getLocale()) }}#gesuche" :active="request()->url() === url(app()->getLocale()) . '#gesuche'">
+                {{ __('home.requests') }}
+            </x-nav.item>
+
         </div>
     </div>
 </header>
