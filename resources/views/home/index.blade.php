@@ -205,62 +205,126 @@
         </section>
 
         <!-- ======= Projekte Section ======= -->
-        <section id="projekte" class="services">
-            <div class="container">
-                <div class="section-title">
-                    <x-heading.decorative class="text-center">
-                        {{ __('home.projects') }}
-                    </x-heading.decorative>
-                    <p>{{ __('home.projects_text1') }}</p>
-                    <p>{{ __('home.projects_text2') }}</p>
+        <section id="projekte" class="bg-white py-16">
+            <div class="container mx-auto px-4">
+                <x-heading.decorative class="text-center">
+                    {{ __('home.projects') }}
+                </x-heading.decorative>
+                <p>
+                    {{ __('home.projects_text1') }}
+                </p>
+                <p>
+                    {{ __('home.projects_text2') }}
+                </p>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+                    <!-- Project 1 -->
+                    <div
+                        class="bg-white p-6 rounded-lg shadow-lg group hover:bg-[#4f73a8] transition-colors duration-300 relative min-h-[300px] overflow-hidden">
+                        <div class="absolute -left-8 top-1/2 -translate-y-1/2">
+                            <div class="text-[#ff689b] text-[100px]">
+                                <i class="bi bi-briefcase"></i>
+                            </div>
+                        </div>
+                        <div class="pl-16">
+                            <h3 class="font-ubuntu text-xl font-bold mb-4 text-primary group-hover:text-white">
+                                {{ __('home.project1_title') }}
+                            </h3>
+                            <p class="group-hover:text-white">
+                                {{ __('home.project1_text') }}
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div
+                        class="bg-white p-6 rounded-lg shadow-lg group hover:bg-[#4f73a8] transition-colors duration-300 relative min-h-[300px] overflow-hidden">
+                        <div class="absolute -left-8 top-1/2 -translate-y-1/2">
+                            <div class="text-[#e9bf06] text-[100px]">
+                                <i class="bi bi-card-checklist"></i>
+                            </div>
+                        </div>
+                        <div class="pl-16">
+                            <h3 class="font-ubuntu text-xl font-bold mb-4 text-primary group-hover:text-white">
+                                {{ __('home.project2_title') }}
+                            </h3>
+                            <p class="group-hover:text-white">
+                                {{ __('home.project2_text') }}
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div
+                        class="bg-white p-6 rounded-lg shadow-lg group hover:bg-[#4f73a8] transition-colors duration-300 relative min-h-[300px] overflow-hidden">
+                        <div class="absolute -left-8 top-1/2 -translate-y-1/2">
+                            <div class="text-[#3fcdc7] text-[100px]">
+                                <i class="bi bi-bar-chart"></i>
+                            </div>
+                        </div>
+                        <div class="pl-16">
+                            <h3 class="font-ubuntu text-xl font-bold mb-4 text-primary group-hover:text-white">
+                                {{ __('home.project3_title') }}
+                            </h3>
+                            <p class="group-hover:text-white">
+                                {{ __('home.project3_text') }}
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="services-grid">
-                    <div class="service-item">
-                        <div class="icon-box">
-                            <div class="icon"><i class="bi bi-briefcase" style="color: #ff689b;"></i></div>
-                            <h3 class="title">{{ __('home.project1_title') }}</h3>
-                            <p class="description">{{ __('home.project1_text') }}</p>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+                    <!-- Project 4 -->
+                    <div
+                        class="bg-white p-6 rounded-lg shadow-lg group hover:bg-[#4f73a8] transition-colors duration-300 relative min-h-[300px] overflow-hidden">
+                        <div class="absolute -left-8 top-1/2 -translate-y-1/2">
+                            <div class="text-[#41cf2e] text-[100px]">
+                                <i class="bi bi-binoculars"></i>
+                            </div>
+                        </div>
+                        <div class="pl-16">
+                            <h3 class="font-ubuntu text-xl font-bold mb-4 text-primary group-hover:text-white">
+                                {{ __('home.project4_title') }}
+                            </h3>
+                            <p class="group-hover:text-white">
+                                {{ __('home.project4_text') }}
+                            </p>
                         </div>
                     </div>
 
-                    <div class="service-item">
-                        <div class="icon-box">
-                            <div class="icon"><i class="bi bi-card-checklist" style="color: #e9bf06;"></i></div>
-                            <h3 class="title">{{ __('home.project2_title') }}</h3>
-                            <p class="description">{{ __('home.project2_text') }}</p>
+                    <!-- Project 5 -->
+                    <div
+                        class="bg-white p-6 rounded-lg shadow-lg group hover:bg-[#4f73a8] transition-colors duration-300 relative min-h-[300px] overflow-hidden">
+                        <div class="absolute -left-8 top-1/2 -translate-y-1/2">
+                            <div class="text-[#d6ff22] text-[100px]">
+                                <i class="bi bi-brightness-high"></i>
+                            </div>
+                        </div>
+                        <div class="pl-16">
+                            <h3 class="font-ubuntu text-xl font-bold mb-4 text-primary group-hover:text-white">
+                                {{ __('home.project5_title') }}
+                            </h3>
+                            <p class="group-hover:text-white">
+                                {{ __('home.project5_text') }}
+                            </p>
                         </div>
                     </div>
 
-                    <div class="service-item">
-                        <div class="icon-box">
-                            <div class="icon"><i class="bi bi-bar-chart" style="color: #3fcdc7;"></i></div>
-                            <h3 class="title">{{ __('home.project3_title') }}</h3>
-                            <p class="description">{{ __('home.project3_text') }}</p>
+                    <!-- Project 6 -->
+                    <div
+                        class="bg-white p-6 rounded-lg shadow-lg group hover:bg-[#4f73a8] transition-colors duration-300 relative min-h-[300px] overflow-hidden">
+                        <div class="absolute -left-8 top-1/2 -translate-y-1/2">
+                            <div class="text-[#4680ff] text-[100px]">
+                                <i class="bi bi-calendar4-week"></i>
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="service-item">
-                        <div class="icon-box">
-                            <div class="icon"><i class="bi bi-binoculars" style="color: #41cf2e;"></i></div>
-                            <h3 class="title">{{ __('home.project4_title') }}</h3>
-                            <p class="description">{{ __('home.project4_text') }}</p>
-                        </div>
-                    </div>
-
-                    <div class="service-item">
-                        <div class="icon-box">
-                            <div class="icon"><i class="bi bi-brightness-high" style="color: #d6ff22;"></i></div>
-                            <h3 class="title">{{ __('home.project5_title') }}</h3>
-                            <p class="description">{{ __('home.project5_text') }}</p>
-                        </div>
-                    </div>
-
-                    <div class="service-item">
-                        <div class="icon-box">
-                            <div class="icon"><i class="bi bi-calendar4-week" style="color: #4680ff;"></i></div>
-                            <h3 class="title">{{ __('home.project6_title') }}</h3>
-                            <p class="description">{{ __('home.project6_text') }}</p>
+                        <div class="pl-16">
+                            <h3 class="font-ubuntu text-xl font-bold mb-4 text-primary group-hover:text-white">
+                                {{ __('home.project6_title') }}
+                            </h3>
+                            <p class="group-hover:text-white">
+                                {{ __('home.project6_text') }}
+                            </p>
                         </div>
                     </div>
                 </div>
