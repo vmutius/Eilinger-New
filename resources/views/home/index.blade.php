@@ -62,62 +62,142 @@
         </section>
 
         <!-- ======= Förderbereiche ======= -->
-        <section id="our-values" class="bg-[#f3f5fa] py-[60px] overflow-hidden">
-            <div class="container">
-                <div class="section-title">
-                    <h2
-                        class="font-decorative text-center text-[2.5rem] font-bold text-[#37517e] uppercase relative mb-5 pb-5
-                              after:content-[''] after:absolute after:block after:w-10 after:h-[3px] after:bg-[#47b2e4] after:bottom-0 after:left-1/2 after:-translate-x-1/2
-                              before:content-[''] before:absolute before:block before:w-[120px] before:h-[1px] before:bg-gray-400 before:bottom-[1px] before:left-1/2 before:-translate-x-1/2">
-                        {{ __('home.funding') }}
-                    </h2>
-                </div>
+        <section id="our-values" class="bg-bodyBg py-16">
+            <div class="container mx-auto px-4">
+                <x-heading.decorative class="text-center">
+                    {{ __('home.funding') }}
+                </x-heading.decorative>
 
                 <!-- First row -->
-                <div class="flex-wrap">
-                    <div class="w-half" style="background-image: url('{{ asset('images/Bildung_4.jpg') }}')">
-                        <div>
-                            <h3>{{ __('home.education') }}</h3>
-                            <p class="card-text">{{ __('home.education_text1') }}</p>
-                            <p class="text-justify">{{ __('home.education_text2') }}</p>
+                <div class="grid md:grid-cols-2 gap-8 mt-8">
+                    <!-- Education Card -->
+                    <div class="relative group overflow-hidden rounded-lg shadow-lg h-[500px]">
+                        <div class="absolute inset-0 bg-cover bg-center"
+                            style="background-image: url('{{ asset('images/Bildung_4.jpg') }}')">
+                        </div>
+                        <div class="absolute inset-0 px-5 pb-5 pt-[160px]">
+                            <div
+                                class="w-full h-full bg-white/90 group-hover:bg-[#4f73a8] transition-colors duration-300 rounded-lg">
+                                <h3
+                                    class="font-ubuntu text-[28px] font-bold text-center mb-4 text-primary group-hover:text-white pt-5">
+                                    {{ __('home.education') }}
+                                </h3>
+                                <div class="px-8">
+                                    <p
+                                        class="text-[#5e5e5e] group-hover:text-white mb-4 transition-colors duration-300">
+                                        {{ __('home.education_text1') }}
+                                    </p>
+                                    <p class="text-black group-hover:text-black">
+                                        {{ __('home.education_text2') }}
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="w-half" style="background-image: url('{{ asset('images/Menschen_5.jpg') }}')">
-                        <div>
-                            <h3>{{ __('home.need') }}</h3>
-                            <p class="card-text">{{ __('home.need_text1') }}</p>
-                            <p class="text-justify">{{ __('home.need_text2') }}</p>
+                    <!-- People in Need Card -->
+                    <div class="relative group overflow-hidden rounded-lg shadow-lg h-[500px]">
+                        <div class="absolute inset-0 bg-cover bg-center"
+                            style="background-image: url('{{ asset('images/Menschen_5.jpg') }}')">
+                        </div>
+                        <div class="absolute inset-0 px-5 pb-5 pt-[160px]">
+                            <div
+                                class="w-full h-full bg-white/90 group-hover:bg-[#4f73a8] transition-colors duration-300 rounded-lg">
+                                <h3
+                                    class="font-ubuntu text-[28px] font-bold text-center mb-4 text-primary group-hover:text-white pt-5">
+                                    {{ __('home.need') }}
+                                </h3>
+                                <div class="px-8">
+                                    <p
+                                        class="text-[#5e5e5e] group-hover:text-white mb-4 transition-colors duration-300">
+                                        {{ __('home.need_text1') }}
+                                    </p>
+                                    <p class="text-black group-hover:text-black">
+                                        {{ __('home.need_text2') }}
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Second row -->
-                <div class="flex-wrap">
-                    <div class="w-half" style="background-image: url('{{ asset('images/Tier_1.jpeg') }}')">
-                        <div>
-                            <h3>{{ __('home.welfare') }}</h3>
-                            <p class="card-text">{{ __('home.welfare_text1') }}</p>
-                            <p class="text-justify">{{ __('home.welfare_text2') }}</p>
+                <div class="grid md:grid-cols-2 gap-8 mt-8">
+                    <!-- Animal Welfare Card -->
+                    <div class="relative group overflow-hidden rounded-lg shadow-lg h-[500px]">
+                        <div class="absolute inset-0 bg-cover bg-center"
+                            style="background-image: url('{{ asset('images/Tier_1.jpeg') }}')">
+                        </div>
+                        <div class="absolute inset-0 px-5 pb-5 pt-[160px]">
+                            <div
+                                class="w-full h-full bg-white/90 group-hover:bg-[#4f73a8] transition-colors duration-300 rounded-lg">
+                                <h3
+                                    class="font-ubuntu text-[28px] font-bold text-center mb-4 text-primary group-hover:text-white pt-5">
+                                    {{ __('home.welfare') }}
+                                </h3>
+                                <div class="px-8">
+                                    <p
+                                        class="text-[#5e5e5e] group-hover:text-white mb-4 transition-colors duration-300">
+                                        {{ __('home.welfare_text1') }}
+                                    </p>
+                                    <p class="text-black group-hover:text-black">
+                                        {{ __('home.welfare_text2') }}
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="w-half" style="background-image: url('{{ asset('images/Umwelt.jpg') }}')">
-                        <div>
-                            <h3>{{ __('home.environment') }}</h3>
-                            <p class="card-text">{{ __('home.environment_text1') }}</p>
-                            <p class="text-justify">{{ __('home.environment_text2') }}</p>
+                    <!-- Environment Card -->
+                    <div class="relative group overflow-hidden rounded-lg shadow-lg h-[500px]">
+                        <div class="absolute inset-0 bg-cover bg-center"
+                            style="background-image: url('{{ asset('images/Umwelt.jpg') }}')">
+                        </div>
+                        <div class="absolute inset-0 px-5 pb-5 pt-[160px]">
+                            <div
+                                class="w-full h-full bg-white/90 group-hover:bg-[#4f73a8] transition-colors duration-300 rounded-lg">
+                                <h3
+                                    class="font-ubuntu text-[28px] font-bold text-center mb-4 text-primary group-hover:text-white pt-5">
+                                    {{ __('home.environment') }}
+                                </h3>
+                                <div class="px-8">
+                                    <p
+                                        class="text-[#5e5e5e] group-hover:text-white mb-4 transition-colors duration-300">
+                                        {{ __('home.environment_text1') }}
+                                    </p>
+                                    <p class="text-black group-hover:text-black">
+                                        {{ __('home.environment_text2') }}
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Third row - centered -->
-                <div class="justify-center">
-                    <div class="w-half" style="background-image: url('{{ asset('images/Menschen_4.jpg') }}')">
-                        <div>
-                            <h3>{{ __('home.rights') }}</h3>
-                            <p class="card-text">{{ __('home.rights_text1') }}</p>
-                            <p class="text-justify">{{ __('home.rights_text2') }}</p>
+                <div class="mt-8 max-w-2xl mx-auto">
+                    <!-- Human Rights Card -->
+                    <div class="relative group overflow-hidden rounded-lg shadow-lg h-[500px]">
+                        <div class="absolute inset-0 bg-cover bg-center"
+                            style="background-image: url('{{ asset('images/Menschen_4.jpg') }}')">
+                        </div>
+                        <div class="absolute inset-0 px-5 pb-5 pt-[160px]">
+                            <div
+                                class="w-full h-full bg-white/90 group-hover:bg-[#4f73a8] transition-colors duration-300 rounded-lg">
+                                <h3
+                                    class="font-ubuntu text-[28px] font-bold text-center mb-4 text-primary group-hover:text-white pt-5">
+                                    {{ __('home.rights') }}
+                                </h3>
+                                <div class="px-8">
+                                    <p
+                                        class="text-[#5e5e5e] group-hover:text-white mb-4 transition-colors duration-300">
+                                        {{ __('home.rights_text1') }}
+                                    </p>
+                                    <p class="text-black group-hover:text-black">
+                                        {{ __('home.rights_text2') }}
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -128,7 +208,9 @@
         <section id="projekte" class="services">
             <div class="container">
                 <div class="section-title">
-                    <h2>{{ __('home.projects') }}</h2>
+                    <x-heading.decorative class="text-center">
+                        {{ __('home.projects') }}
+                    </x-heading.decorative>
                     <p>{{ __('home.projects_text1') }}</p>
                     <p>{{ __('home.projects_text2') }}</p>
                 </div>
@@ -190,7 +272,9 @@
         <section id="gesuche" class="pricing !bg-[#f3f5fa]">
             <div class="container">
                 <div class="section-title">
-                    <h2>{{ __('home.requests') }}</h2>
+                    <x-heading.decorative class="text-center">
+                        {{ __('home.requests') }}
+                    </x-heading.decorative>
                     <p>{{ __('home.request_text') }}</p>
                     <ol>
                         <li>{{ __('home.request_text1') }}</li>
