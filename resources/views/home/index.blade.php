@@ -210,12 +210,10 @@
                 <x-heading.decorative class="text-center">
                     {{ __('home.projects') }}
                 </x-heading.decorative>
-                <p>
-                    {{ __('home.projects_text1') }}
-                </p>
-                <p>
-                    {{ __('home.projects_text2') }}
-                </p>
+                <div class="space-y-6 mb-12">
+                    <p>{{ __('home.projects_text1') }}</p>
+                    <p>{{ __('home.projects_text2') }}</p>
+                </div>
 
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
                     <!-- Project 1 -->
@@ -332,15 +330,16 @@
         </section>
 
 
-        <!-- ======= Gesuche ======= -->
-        <section id="gesuche" class="pricing !bg-[#f3f5fa]">
-            <div class="container">
-                <div class="section-title">
-                    <x-heading.decorative class="text-center">
-                        {{ __('home.requests') }}
-                    </x-heading.decorative>
+        <!-- ======= Gesuche Section ======= -->
+        <section id="gesuche" class="bg-[#f3f5fa] py-16">
+            <div class="container mx-auto px-4">
+                <x-heading.decorative class="text-center">
+                    {{ __('home.requests') }}
+                </x-heading.decorative>
+
+                <div class="space-y-6 mb-12">
                     <p>{{ __('home.request_text') }}</p>
-                    <ol>
+                    <ol class="list-decimal pl-6 space-y-2">
                         <li>{{ __('home.request_text1') }}</li>
                         <li>{{ __('home.request_text2') }}</li>
                         <li>{{ __('home.request_text3') }}</li>
@@ -348,69 +347,120 @@
                         <li>{{ __('home.request_text5') }}</li>
                     </ol>
                     <p>{{ __('home.request_disclaimer') }}</p>
-                    <br />
                     <p>{{ __('home.request_meeting') }}</p>
                 </div>
 
-                <div class="pricing-grid">
-                    <div class="pricing-item">
-                        <div class="box">
-                            <h3>{{ __('home.education') }}</h3>
-                            <ul>
-                                <li><i class="bi bi-check-all"></i> {{ __('home.app_stip') }}</li>
-                                <li><i class="bi bi-check-all"></i> {{ __('home.app_privat') }}</li>
-                                <li><i class="bi bi-check-all"></i> {{ __('home.app_org') }}</li>
-                            </ul>
+                <!-- Request Cards Grid -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Bildung Card -->
+                    <div class="bg-white p-8 rounded-lg shadow-lg flex flex-col h-full">
+                        <h3 class="font-ubuntu text-2xl font-bold mb-6 text-primary">Bildung</h3>
+                        <ul class="space-y-4 flex-grow">
+                            <li class="flex items-center">
+                                <i class="bi bi-check2-all	text-accent mr-2"></i>
+                                Gesuch für ein Stipendium
+                            </li>
+                            <li class="flex items-center">
+                                <i class="bi bi-check2-all text-accent mr-2"></i>
+                                Gesuch für Privatpersonen (ausser Stipendien)
+                            </li>
+                            <li class="flex items-center">
+                                <i class="bi bi-check2-all text-accent mr-2"></i>
+                                Gesuch für Vereine oder Organisationen
+                            </li>
+                        </ul>
+                        <div class="mt-8">
                             <a href="{{ route('user_dashboard', app()->getLocale()) }}"
-                                class="buy-btn">{{ __('home.to_portal') }}</a>
+                                class="inline-block w-full py-3 text-center border border-accent text-accent hover:bg-accent hover:text-white transition-colors duration-300 rounded-lg">
+                                Zum Gesuchsportal
+                            </a>
                         </div>
                     </div>
 
-                    <div class="pricing-item">
-                        <div class="box">
-                            <h3>{{ __('home.welfare') }}</h3>
-                            <ul>
-                                <li><i class="bi bi-check-all"></i> {{ __('home.app_privat') }}</li>
-                                <li><i class="bi bi-check-all"></i> {{ __('home.app_org') }}</li>
-                            </ul>
+                    <!-- Tierschutz Card -->
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <h3 class="font-ubuntu text-2xl font-bold mb-6 text-primary">Tierschutz</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-center">
+                                <i class="bi bi-check2-all text-accent mr-2"></i>
+                                Gesuch für Privatpersonen (ausser Stipendien)
+                            </li>
+                            <li class="flex items-center">
+                                <i class="bi bi-check2-all text-accent mr-2"></i>
+                                Gesuch für Vereine oder Organisationen
+                            </li>
+                        </ul>
+                        <div class="mt-8">
                             <a href="{{ route('user_dashboard', app()->getLocale()) }}"
-                                class="buy-btn">{{ __('home.to_portal') }}</a>
+                                class="inline-block w-full py-3 text-center border border-accent text-accent hover:bg-accent hover:text-white transition-colors duration-300 rounded-lg">
+                                Zum Gesuchsportal
+                            </a>
                         </div>
                     </div>
 
-                    <div class="pricing-item">
-                        <div class="box">
-                            <h3>{{ __('home.rights') }}</h3>
-                            <ul>
-                                <li><i class="bi bi-check-all"></i> {{ __('home.app_privat') }}</li>
-                                <li><i class="bi bi-check-all"></i> {{ __('home.app_org') }}</li>
-                            </ul>
+                    <!-- Menschenrechte Card -->
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <h3 class="font-ubuntu text-2xl font-bold mb-6 text-primary">Menschenrechte</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-center">
+                                <i class="bi bi-check2-all text-accent mr-2"></i>
+                                Gesuch für Privatpersonen (ausser Stipendien)
+                            </li>
+                            <li class="flex items-center">
+                                <i class="bi bi-check2-all text-accent mr-2"></i>
+                                Gesuch für Vereine oder Organisationen
+                            </li>
+                        </ul>
+                        <div class="mt-8">
                             <a href="{{ route('user_dashboard', app()->getLocale()) }}"
-                                class="buy-btn">{{ __('home.to_portal') }}</a>
+                                class="inline-block w-full py-3 text-center border border-accent text-accent hover:bg-accent hover:text-white transition-colors duration-300 rounded-lg">
+                                Zum Gesuchsportal
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Second Row -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mt-8 max-w-[66%] mx-auto">
+                    <!-- Umweltschutz Card -->
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <h3 class="font-ubuntu text-2xl font-bold mb-6 text-primary">Umweltschutz</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-center">
+                                <i class="bi bi-check2-all text-accent mr-2"></i>
+                                Gesuch für Privatpersonen (ausser Stipendien)
+                            </li>
+                            <li class="flex items-center">
+                                <i class="bi bi-check2-all text-accent mr-2"></i>
+                                Gesuch für Vereine oder Organisationen
+                            </li>
+                        </ul>
+                        <div class="mt-8">
+                            <a href="{{ route('user_dashboard', app()->getLocale()) }}"
+                                class="inline-block w-full py-3 text-center border border-accent text-accent hover:bg-accent hover:text-white transition-colors duration-300 rounded-lg">
+                                Zum Gesuchsportal
+                            </a>
                         </div>
                     </div>
 
-                    <div class="pricing-item">
-                        <div class="box">
-                            <h3>{{ __('home.environment') }}</h3>
-                            <ul>
-                                <li><i class="bi bi-check-all"></i> {{ __('home.app_privat') }}</li>
-                                <li><i class="bi bi-check-all"></i> {{ __('home.app_org') }}</li>
-                            </ul>
+                    <!-- Menschen in Not Card -->
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <h3 class="font-ubuntu text-2xl font-bold mb-6 text-primary">Menschen in Not</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-center">
+                                <i class="bi bi-check2-all text-accent mr-2"></i>
+                                Gesuch für Privatpersonen (ausser Stipendien)
+                            </li>
+                            <li class="flex items-center">
+                                <i class="bi bi-check2-all text-accent mr-2"></i>
+                                Gesuch für Vereine oder Organisationen
+                            </li>
+                        </ul>
+                        <div class="mt-8">
                             <a href="{{ route('user_dashboard', app()->getLocale()) }}"
-                                class="buy-btn">{{ __('home.to_portal') }}</a>
-                        </div>
-                    </div>
-
-                    <div class="pricing-item">
-                        <div class="box">
-                            <h3>{{ __('home.need') }}</h3>
-                            <ul>
-                                <li><i class="bi bi-check-all"></i> {{ __('home.app_privat') }}</li>
-                                <li><i class="bi bi-check-all"></i> {{ __('home.app_org') }}</li>
-                            </ul>
-                            <a href="{{ route('user_dashboard', app()->getLocale()) }}"
-                                class="buy-btn">{{ __('home.to_portal') }}</a>
+                                class="inline-block w-full py-3 text-center border border-accent text-accent hover:bg-accent hover:text-white transition-colors duration-300 rounded-lg">
+                                Zum Gesuchsportal
+                            </a>
                         </div>
                     </div>
                 </div>
