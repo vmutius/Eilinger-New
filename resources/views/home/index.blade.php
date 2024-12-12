@@ -75,19 +75,19 @@
                         <div class="absolute inset-0 bg-cover bg-center"
                             style="background-image: url('{{ asset('images/Bildung_4.jpg') }}')">
                         </div>
-                        <div class="absolute inset-0 px-5 pb-5 pt-[160px]">
+                        <div class="absolute inset-0 px-3 sm:px-5 pb-5 pt-[160px]">
                             <div
                                 class="w-full h-full bg-white/90 group-hover:bg-[#4f73a8] transition-colors duration-300 rounded-lg">
                                 <h3
-                                    class="font-ubuntu text-[28px] font-bold text-center mb-4 text-primary group-hover:text-white pt-5">
+                                    class="font-ubuntu text-xl sm:text-[28px] font-bold text-center mb-4 text-primary group-hover:text-white pt-5">
                                     {{ __('home.education') }}
                                 </h3>
-                                <div class="px-8">
+                                <div class="px-4 sm:px-8">
                                     <p
-                                        class="text-[#5e5e5e] group-hover:text-white mb-4 transition-colors duration-300">
+                                        class="text-xs sm:text-base text-[#5e5e5e] group-hover:text-white mb-4 transition-colors duration-300">
                                         {{ __('home.education_text1') }}
                                     </p>
-                                    <p class="text-black group-hover:text-black">
+                                    <p class="text-xs sm:text-base text-black group-hover:text-black">
                                         {{ __('home.education_text2') }}
                                     </p>
                                 </div>
@@ -100,19 +100,19 @@
                         <div class="absolute inset-0 bg-cover bg-center"
                             style="background-image: url('{{ asset('images/Menschen_5.jpg') }}')">
                         </div>
-                        <div class="absolute inset-0 px-5 pb-5 pt-[160px]">
+                        <div class="absolute inset-0 px-3 sm:px-5 pb-5 pt-[160px]">
                             <div
                                 class="w-full h-full bg-white/90 group-hover:bg-[#4f73a8] transition-colors duration-300 rounded-lg">
                                 <h3
-                                    class="font-ubuntu text-[28px] font-bold text-center mb-4 text-primary group-hover:text-white pt-5">
+                                    class="font-ubuntu text-xl sm:text-[28px] font-bold text-center mb-4 text-primary group-hover:text-white pt-5">
                                     {{ __('home.need') }}
                                 </h3>
-                                <div class="px-8">
+                                <div class="px-4 sm:px-8">
                                     <p
-                                        class="text-[#5e5e5e] group-hover:text-white mb-4 transition-colors duration-300">
+                                        class="text-xs sm:text-base text-[#5e5e5e] group-hover:text-white mb-4 transition-colors duration-300">
                                         {{ __('home.need_text1') }}
                                     </p>
-                                    <p class="text-black group-hover:text-black">
+                                    <p class="text-xs sm:text-base text-black group-hover:text-black">
                                         {{ __('home.need_text2') }}
                                     </p>
                                 </div>
@@ -128,19 +128,19 @@
                         <div class="absolute inset-0 bg-cover bg-center"
                             style="background-image: url('{{ asset('images/Tier_1.jpeg') }}')">
                         </div>
-                        <div class="absolute inset-0 px-5 pb-5 pt-[160px]">
+                        <div class="absolute inset-0 px-3 sm:px-5 pb-5 pt-[160px]">
                             <div
                                 class="w-full h-full bg-white/90 group-hover:bg-[#4f73a8] transition-colors duration-300 rounded-lg">
                                 <h3
-                                    class="font-ubuntu text-[28px] font-bold text-center mb-4 text-primary group-hover:text-white pt-5">
+                                    class="font-ubuntu text-xl sm:text-[28px] font-bold text-center mb-4 text-primary group-hover:text-white pt-5">
                                     {{ __('home.welfare') }}
                                 </h3>
-                                <div class="px-8">
+                                <div class="px-4 sm:px-8">
                                     <p
-                                        class="text-[#5e5e5e] group-hover:text-white mb-4 transition-colors duration-300">
+                                        class="text-xs sm:text-base text-[#5e5e5e] group-hover:text-white mb-4 transition-colors duration-300">
                                         {{ __('home.welfare_text1') }}
                                     </p>
-                                    <p class="text-black group-hover:text-black">
+                                    <p class="text-xs sm:text-base text-black group-hover:text-black">
                                         {{ __('home.welfare_text2') }}
                                     </p>
                                 </div>
@@ -153,19 +153,19 @@
                         <div class="absolute inset-0 bg-cover bg-center"
                             style="background-image: url('{{ asset('images/Umwelt.jpg') }}')">
                         </div>
-                        <div class="absolute inset-0 px-5 pb-5 pt-[160px]">
+                        <div class="absolute inset-0 px-3 sm:px-5 pb-5 pt-[160px]">
                             <div
                                 class="w-full h-full bg-white/90 group-hover:bg-[#4f73a8] transition-colors duration-300 rounded-lg">
                                 <h3
-                                    class="font-ubuntu text-[28px] font-bold text-center mb-4 text-primary group-hover:text-white pt-5">
+                                    class="font-ubuntu text-xl sm:text-[28px] font-bold text-center mb-4 text-primary group-hover:text-white pt-5">
                                     {{ __('home.environment') }}
                                 </h3>
-                                <div class="px-8">
+                                <div class="px-4 sm:px-8">
                                     <p
-                                        class="text-[#5e5e5e] group-hover:text-white mb-4 transition-colors duration-300">
+                                        class="text-xs sm:text-base text-[#5e5e5e] group-hover:text-white mb-4 transition-colors duration-300">
                                         {{ __('home.environment_text1') }}
                                     </p>
-                                    <p class="text-black group-hover:text-black">
+                                    <p class="text-xs sm:text-base text-black group-hover:text-black">
                                         {{ __('home.environment_text2') }}
                                     </p>
                                 </div>
@@ -181,19 +181,19 @@
                         <div class="absolute inset-0 bg-cover bg-center"
                             style="background-image: url('{{ asset('images/Menschen_4.jpg') }}')">
                         </div>
-                        <div class="absolute inset-0 px-5 pb-5 pt-[160px]">
+                        <div class="absolute inset-0 px-3 sm:px-5 pb-5 pt-[160px]">
                             <div
                                 class="w-full h-full bg-white/90 group-hover:bg-[#4f73a8] transition-colors duration-300 rounded-lg">
                                 <h3
-                                    class="font-ubuntu text-[28px] font-bold text-center mb-4 text-primary group-hover:text-white pt-5">
+                                    class="font-ubuntu text-xl sm:text-[28px] font-bold text-center mb-4 text-primary group-hover:text-white pt-5">
                                     {{ __('home.rights') }}
                                 </h3>
-                                <div class="px-8">
+                                <div class="px-4 sm:px-8">
                                     <p
-                                        class="text-[#5e5e5e] group-hover:text-white mb-4 transition-colors duration-300">
+                                        class="text-xs sm:text-base text-[#5e5e5e] group-hover:text-white mb-4 transition-colors duration-300">
                                         {{ __('home.rights_text1') }}
                                     </p>
-                                    <p class="text-black group-hover:text-black">
+                                    <p class="text-xs sm:text-base text-black group-hover:text-black">
                                         {{ __('home.rights_text2') }}
                                     </p>
                                 </div>
@@ -354,112 +354,112 @@
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Bildung Card -->
                     <div class="bg-white p-8 rounded-lg shadow-lg flex flex-col h-full">
-                        <h3 class="font-ubuntu text-2xl font-bold mb-6 text-primary">Bildung</h3>
+                        <h3 class="font-ubuntu text-2xl font-bold mb-6 text-primary">{{ __('home.education') }}</h3>
                         <ul class="space-y-4 flex-grow">
                             <li class="flex items-center">
-                                <i class="bi bi-check2-all	text-accent mr-2"></i>
-                                Gesuch für ein Stipendium
+                                <i class="bi bi-check2-all text-accent mr-2"></i>
+                                {{ __('home.app_stip') }}
                             </li>
                             <li class="flex items-center">
                                 <i class="bi bi-check2-all text-accent mr-2"></i>
-                                Gesuch für Privatpersonen (ausser Stipendien)
+                                {{ __('home.app_privat') }}
                             </li>
                             <li class="flex items-center">
                                 <i class="bi bi-check2-all text-accent mr-2"></i>
-                                Gesuch für Vereine oder Organisationen
+                                {{ __('home.app_org') }}
                             </li>
                         </ul>
                         <div class="mt-8">
                             <a href="{{ route('user_dashboard', app()->getLocale()) }}"
                                 class="inline-block w-full py-3 text-center border border-accent text-accent hover:bg-accent hover:text-white transition-colors duration-300 rounded-lg">
-                                Zum Gesuchsportal
+                                {{ __('home.to_portal') }}
                             </a>
                         </div>
                     </div>
 
                     <!-- Tierschutz Card -->
-                    <div class="bg-white p-8 rounded-lg shadow-lg">
-                        <h3 class="font-ubuntu text-2xl font-bold mb-6 text-primary">Tierschutz</h3>
-                        <ul class="space-y-4">
+                    <div class="bg-white p-8 rounded-lg shadow-lg flex flex-col h-full">
+                        <h3 class="font-ubuntu text-2xl font-bold mb-6 text-primary">{{ __('home.welfare') }}</h3>
+                        <ul class="space-y-4 flex-grow">
                             <li class="flex items-center">
                                 <i class="bi bi-check2-all text-accent mr-2"></i>
-                                Gesuch für Privatpersonen (ausser Stipendien)
+                                {{ __('home.app_privat') }}
                             </li>
                             <li class="flex items-center">
                                 <i class="bi bi-check2-all text-accent mr-2"></i>
-                                Gesuch für Vereine oder Organisationen
+                                {{ __('home.app_org') }}
                             </li>
                         </ul>
                         <div class="mt-8">
                             <a href="{{ route('user_dashboard', app()->getLocale()) }}"
                                 class="inline-block w-full py-3 text-center border border-accent text-accent hover:bg-accent hover:text-white transition-colors duration-300 rounded-lg">
-                                Zum Gesuchsportal
+                                {{ __('home.to_portal') }}
                             </a>
                         </div>
                     </div>
 
                     <!-- Menschenrechte Card -->
-                    <div class="bg-white p-8 rounded-lg shadow-lg">
-                        <h3 class="font-ubuntu text-2xl font-bold mb-6 text-primary">Menschenrechte</h3>
-                        <ul class="space-y-4">
+                    <div class="bg-white p-8 rounded-lg shadow-lg flex flex-col h-full">
+                        <h3 class="font-ubuntu text-2xl font-bold mb-6 text-primary">{{ __('home.rights') }}</h3>
+                        <ul class="space-y-4 flex-grow">
                             <li class="flex items-center">
                                 <i class="bi bi-check2-all text-accent mr-2"></i>
-                                Gesuch für Privatpersonen (ausser Stipendien)
+                                {{ __('home.app_privat') }}
                             </li>
                             <li class="flex items-center">
                                 <i class="bi bi-check2-all text-accent mr-2"></i>
-                                Gesuch für Vereine oder Organisationen
+                                {{ __('home.app_org') }}
                             </li>
                         </ul>
                         <div class="mt-8">
                             <a href="{{ route('user_dashboard', app()->getLocale()) }}"
                                 class="inline-block w-full py-3 text-center border border-accent text-accent hover:bg-accent hover:text-white transition-colors duration-300 rounded-lg">
-                                Zum Gesuchsportal
+                                {{ __('home.to_portal') }}
                             </a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Second Row -->
-                <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mt-8 max-w-[66%] mx-auto">
+                <div class="grid md:grid-cols-2 gap-8 mt-8 lg:max-w-[66%] lg:mx-auto">
                     <!-- Umweltschutz Card -->
-                    <div class="bg-white p-8 rounded-lg shadow-lg">
-                        <h3 class="font-ubuntu text-2xl font-bold mb-6 text-primary">Umweltschutz</h3>
-                        <ul class="space-y-4">
+                    <div class="bg-white p-8 rounded-lg shadow-lg flex flex-col h-full">
+                        <h3 class="font-ubuntu text-2xl font-bold mb-6 text-primary">{{ __('home.environment') }}</h3>
+                        <ul class="space-y-4 flex-grow">
                             <li class="flex items-center">
                                 <i class="bi bi-check2-all text-accent mr-2"></i>
-                                Gesuch für Privatpersonen (ausser Stipendien)
+                                {{ __('home.app_privat') }}
                             </li>
                             <li class="flex items-center">
                                 <i class="bi bi-check2-all text-accent mr-2"></i>
-                                Gesuch für Vereine oder Organisationen
+                                {{ __('home.app_org') }}
                             </li>
                         </ul>
                         <div class="mt-8">
                             <a href="{{ route('user_dashboard', app()->getLocale()) }}"
                                 class="inline-block w-full py-3 text-center border border-accent text-accent hover:bg-accent hover:text-white transition-colors duration-300 rounded-lg">
-                                Zum Gesuchsportal
+                                {{ __('home.to_portal') }}
                             </a>
                         </div>
                     </div>
 
                     <!-- Menschen in Not Card -->
-                    <div class="bg-white p-8 rounded-lg shadow-lg">
-                        <h3 class="font-ubuntu text-2xl font-bold mb-6 text-primary">Menschen in Not</h3>
+                    <div class="bg-white p-8 rounded-lg shadow-lg flex flex-col h-full">
+                        <h3 class="font-ubuntu text-2xl font-bold mb-6 text-primary">{{ __('home.need') }}</h3>
                         <ul class="space-y-4">
                             <li class="flex items-center">
                                 <i class="bi bi-check2-all text-accent mr-2"></i>
-                                Gesuch für Privatpersonen (ausser Stipendien)
+                                {{ __('home.app_privat') }}
                             </li>
                             <li class="flex items-center">
                                 <i class="bi bi-check2-all text-accent mr-2"></i>
-                                Gesuch für Vereine oder Organisationen
+                                {{ __('home.app_org') }}
                             </li>
                         </ul>
                         <div class="mt-8">
                             <a href="{{ route('user_dashboard', app()->getLocale()) }}"
                                 class="inline-block w-full py-3 text-center border border-accent text-accent hover:bg-accent hover:text-white transition-colors duration-300 rounded-lg">
-                                Zum Gesuchsportal
+                                {{ __('home.to_portal') }}
                             </a>
                         </div>
                     </div>
