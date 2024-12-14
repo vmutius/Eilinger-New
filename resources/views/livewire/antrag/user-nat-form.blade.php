@@ -22,7 +22,7 @@
                     <option value="{{ $salutation }}">{{ __('user.salutation_name.' . $salutation->name) }}</option>
                 @endforeach
             </select>
-            @error('user.salutatiom')
+            @error('user.salutation')
                 <div style="font-size: 0.75rem; color: red">{{ $message }}</div>
             @enderror
         </div>

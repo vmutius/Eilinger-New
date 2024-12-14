@@ -29,7 +29,7 @@
 </head>
 
 <body class="font-primary bg-bodyBg">
-    <div class="min-h-screen flex flex-col">
+    <div class="min-h-screen flex flex-col" x-data="navbar">
         <x-layout.navbar />
 
         <!-- Flash Messages -->
