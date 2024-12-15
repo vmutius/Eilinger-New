@@ -1,5 +1,5 @@
 <div class="py-6">
-    <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center mb-6">
             <h2 class="text-3xl font-ubuntu text-primary font-semibold">
                 {{ __('application.applications') }}
@@ -56,7 +56,7 @@
                                         {{ __('attributes.delete') }}
                                     </button>
                                     <a href="{{ route('user_nachricht', ['application_id' => $application->id, 'locale' => app()->getLocale()]) }}"
-                                        class="inline-flex items-center px-3 py-1.5 bg-green-600 text-white text-sm rounded-md hover:bg-green-700 transition-colors">
+                                        class="inline-flex items-center px-3 py-1.5 bg-success text-white text-sm rounded-md hover:bg-green-700 transition-colors">
                                         {{ __('attributes.showMessages') }}
                                     </a>
                                 </td>

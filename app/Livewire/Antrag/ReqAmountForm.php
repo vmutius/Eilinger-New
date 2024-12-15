@@ -32,18 +32,6 @@ class ReqAmountForm extends Component
     {
         $this->application = Application::where('id', session()->get('appl_id'))->first();
 
-        // More detailed debug of user type
-        logger()->debug('Detailed User Type Check:', [
-            'user_id' => $this->application->user->id,
-            'raw_type' => $this->application->user->getRawOriginal('type'),  // Get raw value from database
-            'type_object' => $this->application->user->type,
-            'type_value' => $this->application->user->type->value,
-            'nat_value' => Types::nat->value,
-            'jur_value' => Types::jur->value,
-            'raw_comparison' => $this->application->user->getRawOriginal('type') === Types::nat->value,
-            'enum_comparison' => $this->application->user->type === Types::nat
-        ]);
-
         // Get financing amount based on user type - using raw value comparison
         if ($this->application->user->getRawOriginal('type') === Types::nat->value) {
             $this->total_amount_financing = Financing::where('application_id', session()->get('appl_id'))

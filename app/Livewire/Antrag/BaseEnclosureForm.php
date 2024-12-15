@@ -68,6 +68,7 @@ abstract class BaseEnclosureForm extends Component
                          $this->enclosure->{$this->getCamelCaseSendLater($field)} == 0;
             $rules[$field] = [new FileUploadRule($isRequired)];
             $rules["enclosure.{$this->getCamelCaseSendLater($field)}"] = 'boolean|nullable';
+			logger()->debug('Rules:', $rules);
         }
 
         foreach ($this->getOptionalFields() as $field) {

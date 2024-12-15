@@ -118,7 +118,7 @@
                     <label class="block text-sm font-medium text-gray-700 mb-1">
                         {{ __('parents.since') }}
                     </label>
-                    <input wire:model.blur="parentsList.{{ $index }}.since" type="number"
+                    <input wire:model.blur="parentsList.{{ $index }}.since" type="date"
                         class="w-full rounded-md border-gray-300 shadow-sm focus:border-accent focus:ring focus:ring-accent focus:ring-opacity-50">
                     @error('parentsList.' . $index . '.since')
                         <p class="mt-1 text-sm text-red-600">{{ $message }}</p>

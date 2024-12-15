@@ -21,7 +21,7 @@ class SiblingForm extends Component
             'siblingsList.*.education' => 'nullable',
             'siblingsList.*.graduation_year' => 'nullable',
             'siblingsList.*.place_of_residence' => 'nullable',
-            'siblingsList.*.get_amount' => ['nullable', new Enum(GetAmount::class)],
+            'siblingsList.*.get_amount' => ['required', new Enum(GetAmount::class)],
             'siblingsList.*.support_site' => [
                 function ($attribute, $value, $fail) {
                     $index = explode('.', $attribute)[1];
@@ -33,6 +33,35 @@ class SiblingForm extends Component
                 },
             ],
         ];
+    }
+
+
+    public function messages(): array
+    {
+        $messages = [];
+        foreach ($this->siblingsList as $index => $sibling) {
+            $position = $index + 1;
+            $siblingLabel = __('sibling.sibling', ['position' => $position]);
+
+            $messages["siblingsList.{$index}.birth_year.required"] = __('validation.required', [
+                'attribute' => "{$siblingLabel} {$this->getFieldLabel('birthyear')}"
+            ]);
+            $messages["siblingsList.{$index}.lastname.required"] = __('validation.required', [
+                'attribute' => "{$siblingLabel} {$this->getFieldLabel('lastname')}"
+            ]);
+            $messages["siblingsList.{$index}.firstname.required"] = __('validation.required', [
+                'attribute' => "{$siblingLabel} {$this->getFieldLabel('firstname')}"
+            ]);
+            $messages["siblingsList.{$index}.get_amount.required"] = __('validation.required', [
+                'attribute' => "{$siblingLabel} {$this->getFieldLabel('get_amount')}"
+            ]);
+        }
+        return $messages;
+    }
+
+    private function getFieldLabel($field): string
+    {
+        return __("sibling.{$field}");
     }
 
     public function mount()

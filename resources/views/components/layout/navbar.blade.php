@@ -32,11 +32,17 @@
                     </x-nav.item>
 
                     @auth
-                        <li>
+                        <li class="flex items-center space-x-4">
                             <a href="{{ route('user_dashboard', app()->getLocale()) }}"
                                 class="inline-block py-2 px-4 text-white bg-accent hover:bg-accent-hover rounded-md transition-colors">
                                 Dashboard
                             </a>
+                            <form method="POST" action="{{ route('logout', app()->getLocale()) }}" class="inline">
+                                @csrf
+                                <button type="submit" class="py-2 px-4 text-white hover:text-accent transition-colors">
+                                    {{ __('home.logout') }}
+                                </button>
+                            </form>
                         </li>
                     @else
                         <li>
@@ -127,11 +133,17 @@
                         </a>
                     </li>
                     @auth
-                        <li>
+                        <li class="flex items-center space-x-4">
                             <a href="{{ route('user_dashboard', app()->getLocale()) }}"
                                 class="inline-block py-2 px-4 text-white bg-accent hover:bg-accent-hover rounded-md transition-colors">
                                 Dashboard
                             </a>
+                            <form method="POST" action="{{ route('logout', app()->getLocale()) }}" class="inline">
+                                @csrf
+                                <button type="submit" class="py-2 px-4 text-white hover:text-accent transition-colors">
+                                    {{ __('home.logout') }}
+                                </button>
+                            </form>
                         </li>
                     @else
                         <li>

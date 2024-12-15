@@ -1,5 +1,5 @@
 <div class="py-6">
-    <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto px-4 sm:px-6 lg:px-8">
         <h2 class="text-3xl font-ubuntu text-primary mb-6 font-semibold">
             {{ __('userOverview.welcome') }}
         </h2>

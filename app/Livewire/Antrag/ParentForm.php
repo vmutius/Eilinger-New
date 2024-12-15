@@ -36,6 +36,34 @@ class ParentForm extends Component
         ];
     }
 
+	public function messages(): array
+    {
+        $messages = [];
+        foreach ($this->parentsList as $index => $parent) {
+            $position = $index + 1;
+            $parentLabel = __('parents.parent', ['position' => $position]);
+
+            $messages["parentsList.{$index}.birthday.required"] = __('validation.required', [
+                'attribute' => "{$parentLabel} {$this->getFieldLabel('birthday')}"
+            ]);
+            $messages["parentsList.{$index}.lastname.required"] = __('validation.required', [
+                'attribute' => "{$parentLabel} {$this->getFieldLabel('lastname')}"
+            ]);
+            $messages["parentsList.{$index}.firstname.required"] = __('validation.required', [
+                'attribute' => "{$parentLabel} {$this->getFieldLabel('firstname')}"
+            ]);
+            $messages["parentsList.{$index}.parent_type.required"] = __('validation.required', [
+                'attribute' => "{$parentLabel} {$this->getFieldLabel('parent_type')}"
+            ]);
+        }
+        return $messages;
+    }
+
+    private function getFieldLabel($field): string
+    {
+        return __("parents.{$field}");
+    }
+
     public function validationAttributes(): array
     {
         return Lang::get('parents');

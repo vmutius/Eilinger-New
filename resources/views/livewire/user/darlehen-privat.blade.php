@@ -1,5 +1,5 @@
 <div class="py-6">
-    <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto px-4 sm:px-6 lg:px-8">
         <x-application-progress :current-step="$currentStep" :total-steps="9" />
 
         <x-application-step :current-step="$currentStep" :step-number="1" :total-steps="9" :title="__('user.candidate')"
