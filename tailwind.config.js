@@ -55,7 +55,8 @@ export default {
 				body: '#E6E9ED',
 				text: '#1b2356',
 				// Status colors
-				success: '#66BB6A',
+				success: '#15803d',
+				successHover: '#166534',
 				warning: '#FFA726',
 				danger: '#EF5350',
 				info: '#29B6F6'
