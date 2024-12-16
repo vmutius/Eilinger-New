@@ -31,7 +31,7 @@
     </td>
     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
         <label class="inline-flex items-center">
-            <input type="checkbox" wire:model="enclosure.{{ $fieldName }}SendLater"
+            <input type="checkbox" wire:model="sendLaterFields.{{ $fieldName }}"
                 class="rounded border-gray-300 text-primary shadow-sm focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50">
             <span class="ml-2">{{ __('enclosure.send_later') }}</span>
         </label>

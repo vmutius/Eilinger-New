@@ -56,7 +56,7 @@
                 </div>
             @empty
                 <div class="p-4 text-sm text-gray-600 text-center">
-                    {{ __('message.no_notifications') }}
+                    {{ __('message.noMessages') }}
                 </div>
             @endforelse
         </div>
