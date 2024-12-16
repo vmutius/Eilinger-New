@@ -1,7 +1,7 @@
-<div class="border rounded-lg bg-white" x-data="{ open: true }">
+<div class="border rounded-lg bg-white" x-data="{ open: false }">
     <!-- Accordion Header -->
     <button @click="open = !open"
-        class="w-full flex justify-between items-center p-4 bg-gray-50 hover:bg-gray-100 transition-colors">
+        class="w-full flex justify-between items-center p-4 bg-primary-300 hover:bg-primary-400 transition-colors">
         <h2 class="text-lg font-medium text-gray-900">{{ __('enclosure.title') }}</h2>
         <svg class="h-5 w-5 text-gray-500 transform transition-transform" :class="{ 'rotate-180': open }"
             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">

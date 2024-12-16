@@ -1,7 +1,7 @@
 <!-- Page Header -->
 <div>
     <div class="mb-6">
-        <h1 class="text-2xl font-bold  text-primary-800">
+        <h1 class="text-3xl font-ubuntu text-primary font-semibold">
             Antrag {{ $application->name }}
             <span class="text-lg font-normal text-gray-600">(Bereich:
                 {{ __('application.bereichs_name.' . $application->bereich->name) }})</span>

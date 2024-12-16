@@ -1,7 +1,7 @@
 <div>
     <!-- Page Header -->
     <div class="mb-6">
-        <h1 class="text-2xl font-semibold text-gray-900">Admin Dashboard</h1>
+        <h1 class="text-3xl font-ubuntu text-primary font-semibold">Admin Dashboard</h1>
         <p class="mt-2 text-sm text-gray-700">Willkommen im Administrationsbereich der Eilinger Stiftung</p>
     </div>
 
@@ -21,6 +21,13 @@
             <p class="mt-2 text-sm text-gray-600">
                 {{ $unverifiedUsers }} unverified
             </p>
+            <div class="mt-4">
+                <a href="{{ route('admin_users', app()->getLocale()) }}"
+                    class="text-sm text-primary hover:text-primary-600 flex items-center">
+                    <i class="bi bi-person-plus mr-2"></i>
+                    Benutzer verwalten
+                </a>
+            </div>
         </div>
 
         <!-- Total Applications -->
@@ -37,6 +44,13 @@
             <p class="mt-2 text-sm text-gray-600">
                 {{ $pendingApplications }} ausstehend
             </p>
+            <div class="mt-4">
+                <a href="{{ route('admin_applications', app()->getLocale()) }}"
+                    class="text-sm text-primary hover:text-primary-600 flex items-center">
+                    <i class="bi bi-envelope-check mr-2"></i>
+                    Anträge prüfen
+                </a>
+            </div>
         </div>
 
         <!-- Active Projects -->
@@ -66,15 +80,15 @@
                 </div>
             </div>
             <div class="space-y-2">
-                <a href="{{ route('admin_users', app()->getLocale()) }}"
+                <a href="{{ route('admin_profile.edit', app()->getLocale()) }}"
                     class="text-sm text-primary hover:text-primary-600 flex items-center">
-                    <i class="bi bi-person-plus mr-2"></i>
-                    Benutzer verwalten
+                    <i class="bi bi-person mr-2"></i>
+                    Profile verwalten
                 </a>
-                <a href="{{ route('admin_applications', app()->getLocale()) }}"
+                <a href="{{ route('admin_settings', app()->getLocale()) }}"
                     class="text-sm text-primary hover:text-primary-600 flex items-center">
-                    <i class="bi bi-envelope mr-2"></i>
-                    Anträge prüfen
+                    <i class="bi bi-gear mr-2"></i>
+                    Einstellungen
                 </a>
             </div>
         </div>
@@ -92,7 +106,18 @@
                     <div class="p-4 hover:bg-gray-50">
                         <div class="flex items-center justify-between">
                             <div>
-                                <p class="text-sm font-medium text-gray-900">{{ $application->name }}</p>
+                                <div class="flex items-center gap-3">
+                                    <p class="text-sm font-medium text-gray-900">{{ $application->name }}</p>
+                                    <span
+                                        class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium
+                                        {{ $application->appl_status_context === 'warning' ? 'bg-yellow-100 text-yellow-800' : '' }}
+                                        {{ $application->appl_status_context === 'success' ? 'bg-green-100 text-green-800' : '' }}
+                                        {{ $application->appl_status_context === 'danger' ? 'bg-red-100 text-red-800' : '' }}
+                                        {{ $application->appl_status_context === 'info' ? 'bg-blue-100 text-blue-800' : '' }}">
+                                        {{ __('application.status_name.' . $application->appl_status->name) }}
+                                    </span>
+                                </div>
+
                                 @if ($application->user)
                                     <p class="text-sm text-gray-500">
                                         {{ $application->user->firstname }} {{ $application->user->lastname }}

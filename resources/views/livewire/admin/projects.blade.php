@@ -1,7 +1,7 @@
 <div>
     <!-- Header -->
     <div class="mb-6">
-        <h1 class="text-2xl font-bold text-primary-800">{{ __('application.proj_overview') }}</h1>
+        <h1 class="text-3xl font-ubuntu text-primary font-semibold">{{ __('application.proj_overview') }}</h1>
         <p class="mt-2 text-gray-600">{{ __('application.proj_overview_text') }}</p>
     </div>
 
